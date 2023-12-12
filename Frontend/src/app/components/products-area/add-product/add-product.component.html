@@ -1,0 +1,25 @@
+<div class="box">
+
+    <form (ngSubmit)="send()" ngNativeValidate >
+
+        <label>Destination :</label>
+        <input type="text" name="name" [(ngModel)]="vacation.destination" minlength="2" maxlength="100" >
+
+        <label>Description :</label>
+        <input type="text" name="name" [(ngModel)]="vacation.description" minlength="2" maxlength="100" >
+
+        <label>Price :</label>
+        <input type="number" name="price" [(ngModel)]="vacation.price"  required min="0" max="1000">
+
+        <label>Start Date: </label>
+        <input type="date" name="startDate" [(ngModel)]="vacation.startDate" required>
+
+        <label>End Date: </label>
+        <input type="date" name="endDate" [(ngModel)]="vacation.endDate">
+
+        <label>Image :</label>
+        <input type="file" accept="image/*" #imageBox required>
+
+        <button>Add</button>
+    </form>
+</div>

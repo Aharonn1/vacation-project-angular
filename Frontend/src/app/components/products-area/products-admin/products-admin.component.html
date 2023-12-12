@@ -1,0 +1,8 @@
+<div>
+    <a routerLink="/trip/new">➕</a>
+    <br>
+    <app-card-admin  
+    *ngFor="let v of vacations" [vacation]="v" (deleteMe)="deleteVacation($event)" 
+    ></app-card-admin>
+</div>
+ 

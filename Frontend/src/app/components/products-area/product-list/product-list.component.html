@@ -1,0 +1,9 @@
+<div>
+    <button (click)="vacationsActive()">vacations Active</button>
+    <sPan> | </sPan>
+    <button (click)="vacationsNotActive()">vacations not Active</button>
+    <sPan> | </sPan>
+    <button (click)="favoriteVacations()">favorite vacations</button>
+    <br>
+    <app-product-card  *ngFor="let v of vacations" [vacation]="v" (deleteMe)="deleteVacation($event)"></app-product-card>
+</div>

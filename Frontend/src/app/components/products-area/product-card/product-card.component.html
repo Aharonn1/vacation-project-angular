@@ -1,0 +1,19 @@
+<div class="box">
+    <div>  
+        Destination: {{vacation.destination}}
+        <br>
+        Description {{vacation.description}}
+        <br>
+        start date : {{vacation.startDate.slice(0, 10).split("-").reverse().join("/")}} 
+        <br>
+        end date : {{vacation.endDate.slice(0, 10).split("-").reverse().join("/")}} 
+        <br>
+        price : {{vacation.price | currency:"ILS"}}
+        <br>
+        <button (click)="likeVacation()" >like</button>
+        Followers : {{vacation.followersCount}}
+    </div>
+    <div>
+        <img [src]="imageSource">
+    </div>
+</div>
